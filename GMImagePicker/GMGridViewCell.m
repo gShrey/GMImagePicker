@@ -97,6 +97,7 @@ static UIColor *disabledColor;
         _videoDuration.textAlignment = NSTextAlignmentRight;
         _videoDuration.frame = CGRectMake(x_offset, self.bounds.size.height-titleHeight, self.bounds.size.width-2*x_offset, titleHeight);
         _videoDuration.contentMode = UIViewContentModeRight;
+        
         _videoDuration.translatesAutoresizingMaskIntoConstraints = NO;
         _videoDuration.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
         [self addSubview:_videoDuration];
@@ -120,6 +121,7 @@ static UIColor *disabledColor;
         [_selectedButton setImage:[UIImage imageNamed:@"GMSelected" inBundle:[NSBundle bundleForClass:GMGridViewCell.class] compatibleWithTraitCollection:nil] forState:UIControlStateSelected];
         _selectedButton.hidden = NO;
         _selectedButton.userInteractionEnabled = NO;
+        [_selectedButton setValue:@"" forKey:@"nuiClass"];
         [self addSubview:_selectedButton];
     }
 
