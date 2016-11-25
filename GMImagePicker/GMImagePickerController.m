@@ -87,8 +87,8 @@
     _navigationController.toolbar.tintColor = _toolbarTintColor;
     
     _navigationController.navigationBar.backgroundColor = _navigationBarBackgroundColor;
-    _navigationController.navigationBar.barTintColor = _navigationBarBarTintColor;
-    _navigationController.navigationBar.tintColor = _navigationBarTintColor;
+    //_navigationController.navigationBar.barTintColor = _navigationBarBarTintColor;
+    //_navigationController.navigationBar.tintColor = _navigationBarTintColor;
    
     NSDictionary *attributes;
     if (_useCustomFontForNavigationBar) {
@@ -115,7 +115,7 @@
     _navigationController = [[UINavigationController alloc] initWithRootViewController:albumsViewController];
     _navigationController.delegate = self;
     
-    _navigationController.navigationBar.translucent = YES;
+    _navigationController.navigationBar.translucent = NO;
     
     [_navigationController willMoveToParentViewController:self];
     [_navigationController.view setFrame:self.view.frame];
