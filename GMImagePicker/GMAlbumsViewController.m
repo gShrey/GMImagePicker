@@ -85,7 +85,8 @@ static NSString * const CollectionCellReuseIdentifier = @"CollectionCell";
     }
     
     // Bottom toolbar
-    self.toolbarItems = self.picker.toolbarItems;
+    
+    //self.toolbarItems = self.picker.toolbarItems;
     
     // Title
     if (!self.picker.title) {
@@ -237,7 +238,7 @@ static NSString * const CollectionCellReuseIdentifier = @"CollectionCell";
     GMAlbumsViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[GMAlbumsViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.accessoryType = UITableViewCellAccessoryNone;
     }
     
     // Increment the cell's tag
